@@ -14,5 +14,7 @@ stdenv.mkDerivation {
     for img in usr/share/plymouth/themes/nix-splash/resources/*.png; do
       install -Dm644 "$img" $out/share/plymouth/themes/nix-splash/resources/$(basename "$img")
     done
+
+    find $out/share/plymouth/themes/ -name \*.plymouth -exec sed -i "s@/usr/@$out/@" {} \;
   '';
 }
