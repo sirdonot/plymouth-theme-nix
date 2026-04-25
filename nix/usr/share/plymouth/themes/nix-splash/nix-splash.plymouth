@@ -1,0 +1,8 @@
+[Plymouth Theme]
+Name=nix-splash
+Description=nix flake animation
+ModuleName=script
+
+[script]
+ImageDir=/usr/share/plymouth/themes/nix-splash/resources
+ScriptFile=/usr/share/plymouth/themes/nix-splash/nix-splash.script
